@@ -1275,9 +1275,8 @@ public class MaterialEditText extends AppCompatEditText {
 
   @Override
   protected void onDraw(@NonNull Canvas canvas) {
-
-    int startX = getScrollX() + (iconLeftBitmaps == null ? 0 : (iconOuterWidth + iconPadding)) + getPaddingLeft();
-    int endX = getScrollX() + (iconRightBitmaps == null ? getWidth() : getWidth() - iconOuterWidth - iconPadding) - getPaddingRight();
+    int startX = getScrollX() + (iconLeftBitmaps == null ? 0 : (iconOuterWidth + iconPadding));
+    int endX = getScrollX() + (iconRightBitmaps == null ? getWidth() : getWidth() - iconOuterWidth - iconPadding);
     int lineStartY = getScrollY() + getHeight() - getPaddingBottom();
 
     // draw the icon(s)
